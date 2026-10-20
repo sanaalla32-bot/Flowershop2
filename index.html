@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>see the world from my view | تسجيل الدخول</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home" data-backend="html" data-about="about.html" data-index="index.html">
+  <div id="top"></div>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">🌸 see the world from my view</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">تسجيل الدخول</a>
+      <a href="about.html">عن المتجر</a>
+      <a href="pots.html">الأصص</a>
+      <a href="bouquets.html">البوكيهات</a>
+    </nav>
+    <div class="nav-tools">
+      <span id="userBox" class="user-box">
+      
+      </span>
+      <button class="icon-btn" id="themeBtn" type="button" title="الوضع الليلي">🌙</button>
+      <button class="icon-btn" id="cartBtn" type="button" title="سلة المشتريات">🛒<span class="badge cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main class="container narrow">
+
+    <section class="hero reveal">
+      <h1 class="brand-title">see the world from my view</h1>
+      <p class="slogan">نحن نصنع السعادة ونقدمها بأسلوب عصري</p>
+      <p class="greeting" id="greeting"></p>
+    </section>
+
+    <section class="card reveal">
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="login">تسجيل الدخول</button>
+        <button type="button" class="tab" data-tab="register">حساب جديد</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-login">
+        <form id="loginForm" method="post" action="#" novalidate>
+          
+        <div class="field">
+          <label for="email">البريد الإلكتروني</label>
+          <div class="input-wrap"><input type="email" id="email" name="email" autocomplete="email"></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="password">كلمة المرور</label>
+          <div class="input-wrap"><input type="password" id="password" name="password" autocomplete="current-password"><button type="button" class="toggle-pass" data-target="password" title="إظهار/إخفاء">👁</button></div>
+          <div class="err"></div>
+        </div>
+          <div id="loginMsg" class="form-msg"></div>
+          <button class="btn btn-block" type="submit">دخول</button>
+        </form>
+      </div>
+
+      <div class="tab-panel" id="tab-register">
+        <form id="registerForm" method="post" action="#" novalidate>
+          
+        <div class="field">
+          <label for="rname">الاسم الكامل</label>
+          <div class="input-wrap"><input type="text" id="rname" name="name" ></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="remail">البريد الإلكتروني</label>
+          <div class="input-wrap"><input type="email" id="remail" name="email" ></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="rphone">رقم الهاتف (اختياري)</label>
+          <div class="input-wrap"><input type="tel" id="rphone" name="phone" ></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="rcity">المدينة</label>
+          <select id="rcity" name="city"><option value="">اختاري المدينة</option><option>ود مدني</option><option>الخرطوم</option><option>أم درمان</option><option>بورتسودان</option><option>كسلا</option><option>أخرى</option></select>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="rpass">كلمة المرور (6 أحرف على الأقل)</label>
+          <div class="input-wrap"><input type="password" id="rpass" name="password" ><button type="button" class="toggle-pass" data-target="rpass" title="إظهار/إخفاء">👁</button></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="rpass2">تأكيد كلمة المرور</label>
+          <div class="input-wrap"><input type="password" id="rpass2" name="password2" ><button type="button" class="toggle-pass" data-target="rpass2" title="إظهار/إخفاء">👁</button></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label class="check"><input type="checkbox" id="terms" name="terms" value="1"> أوافق على شروط المتجر</label>
+          <div class="err"></div>
+        </div>
+          <div id="registerMsg" class="form-msg"></div>
+          <button class="btn btn-block" type="submit">إنشاء الحساب</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; see the world from my view</p>
+    <p><a href="#top">&#8593; العودة للأعلى</a></p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>🛒 سلة المشتريات</h3>
+      <button class="icon-btn" id="closeCart" type="button">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>المجموع</span><strong id="cartTotal">0 جنيه</strong></div>
+      <button class="btn" id="checkoutBtn" type="button">إتمام الطلب</button>
+      <button class="btn btn-outline" id="clearCart" type="button">تفريغ السلة</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="icon-btn modal-close" id="modalClose" type="button">✕</button>
+      <img id="modalImg" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalMeta"></p>
+      <p class="price" id="modalPrice"></p>
+      <button class="btn" id="modalAdd" type="button">أضف للسلة 🛒</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="to-top" id="toTop" type="button" title="للأعلى">&#8593;</button>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>see the world from my view | عن المتجر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-backend="html" data-about="about.html" data-index="index.html">
+  <div id="top"></div>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">🌸 see the world from my view</a>
+    <nav class="nav-links">
+      <a href="index.html">تسجيل الدخول</a>
+      <a href="about.html" class="active">عن المتجر</a>
+      <a href="pots.html">الأصص</a>
+      <a href="bouquets.html">البوكيهات</a>
+    </nav>
+    <div class="nav-tools">
+      <span id="userBox" class="user-box">
+      
+      </span>
+      <button class="icon-btn" id="themeBtn" type="button" title="الوضع الليلي">🌙</button>
+      <button class="icon-btn" id="cartBtn" type="button" title="سلة المشتريات">🛒<span class="badge cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero reveal">
+      <h2>عن المتجر</h2>
+      <p class="greeting" id="greeting"></p>
+    </section>
+
+    <section class="card reveal">
+      <h2>🌸 نبذة عن المتجر</h2>
+      <p>متجر زهور يجمع بين جمال الطبيعة والذوق العصري. نختار كل زهرة بعناية لتصل إليك طازجة وبتنسيق يعبّر عن مشاعرك في كل مناسبة.</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>✨ عن البراند</h2>
+      <p><b>see the world from my view</b> فكرة بسيطة: لكل شخص طريقته في رؤية العالم، ونحن نترجمها إلى زهور.<br>شعارنا «نحن نصنع السعادة ونقدمها بأسلوب عصري».</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>💐 خدماتنا</h2>
+      <h3>الأصص</h3>
+      <p>أصص نباتات وزهور طبيعية بأحجام وتصاميم مختلفة، تناسب المنزل والمكتب وتصلح كهدية تدوم طويلاً.</p>
+      <p><a class="btn btn-outline" href="pots.html">تصفّحي الأصص</a></p>
+      <h3>البوكيهات</h3>
+      <p>بوكيهات زهور منسقة بأسلوب عصري للمناسبات.</p>
+      <p><a class="btn btn-outline" href="bouquets.html">تصفّحي البوكيهات</a></p>
+      <h3>المناسبات التي نخدمها</h3>
+      <ul>
+        <li>أعياد الميلاد</li>
+        <li>التخرج</li>
+        <li>الخطوبة والزواج</li>
+        <li>التهنئة والزيارات</li>
+      </ul>
+    </section>
+
+    <section class="card reveal">
+      <h2>📋 كيف تطلبين؟</h2>
+      <ol>
+        <li>اختاري منتجاتك من صفحة الأصص أو البوكيهات وأضيفيها للسلة.</li>
+        <li>راجعي السلة واضغطي «إتمام الطلب».</li>
+        <li>املئي نموذج الطلب أدناه.</li>
+        <li>نتواصل معك لتأكيد الطلب ونسلّمه في الموعد.</li>
+      </ol>
+    </section>
+
+    <section class="offer reveal" id="countdown">
+      <h3>⏰ آخر موعد لطلبات اليوم الساعة 8 مساءً</h3>
+      <div class="timer">
+        <div><b id="cdS">00</b>ثانية</div>
+        <div><b id="cdM">00</b>دقيقة</div>
+        <div><b id="cdH">00</b>ساعة</div>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <h2>❓ الأسئلة الشائعة</h2>
+      <details><summary>كم تستغرق مدة التوصيل؟</summary><p>من يوم إلى يومين حسب موقعك.</p></details>
+      <details><summary>هل يمكن تخصيص البوكيه؟</summary><p>نعم، تختارين الزهور والألوان وتضيفين بطاقة إهداء.</p></details>
+      <details><summary>كيف أعتني بالأصيص؟</summary><p>موقع مضيء بدون شمس مباشرة، وسقاية منتظمة حسب نوع النبات.</p></details>
+    </section>
+
+    <section class="card reveal" id="order">
+      <h2>🛍️ اطلبي الآن</h2>
+      <p class="notice" id="loginNote" hidden>للطلب، <a href="index.html">سجّلي الدخول</a> أو أنشئي حساباً أولاً.</p>
+      <div class="summary" id="orderSummary"></div>
+      <form id="orderForm" method="post" action="#" novalidate>
+        
+        <input type="hidden" name="cart" id="cartInput" value="[]">
+        <div class="field">
+          <label for="oname">الاسم</label>
+          <div class="input-wrap"><input type="text" id="oname" name="name" ></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="ophone">رقم الهاتف</label>
+          <div class="input-wrap"><input type="tel" id="ophone" name="phone" ></div>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="oaddress">العنوان</label>
+          <textarea id="oaddress" name="address" rows="2"></textarea>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label for="odate">تاريخ التسليم</label>
+          <div class="input-wrap"><input type="date" id="odate" name="date" ></div>
+          <div class="err"></div>
+        </div>
+        <fieldset>
+          <legend>إضافات</legend>
+          <label class="check"><input type="checkbox" name="extras[]" value="card"> بطاقة إهداء (+1,000 جنيه)</label>
+          <label class="check"><input type="checkbox" name="extras[]" value="wrap"> تغليف هدية (+3,000 جنيه)</label>
+          <label class="check"><input type="checkbox" name="extras[]" value="delivery"> توصيل للمنزل (+5,000 جنيه)</label>
+        </fieldset>
+        <div class="field">
+          <label for="onote">ملاحظات أو رسالة الإهداء</label>
+          <textarea id="onote" name="note" rows="3"></textarea>
+        </div>
+        <div id="orderMsg" class="form-msg"></div>
+        <button class="btn btn-block" type="submit">إرسال الطلب</button>
+      </form>
+    </section>
+
+    <section class="card reveal">
+      <h2>📍 موقع المتجر</h2>
+      <!-- غيّري عنوان المكان في q= إلى موقع متجرك -->
+      <iframe title="موقع المتجر" loading="lazy" src="https://www.google.com/maps?q=Wad+Madani&amp;output=embed"></iframe>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; see the world from my view</p>
+    <p><a href="#top">&#8593; العودة للأعلى</a></p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>🛒 سلة المشتريات</h3>
+      <button class="icon-btn" id="closeCart" type="button">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>المجموع</span><strong id="cartTotal">0 جنيه</strong></div>
+      <button class="btn" id="checkoutBtn" type="button">إتمام الطلب</button>
+      <button class="btn btn-outline" id="clearCart" type="button">تفريغ السلة</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="icon-btn modal-close" id="modalClose" type="button">✕</button>
+      <img id="modalImg" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalMeta"></p>
+      <p class="price" id="modalPrice"></p>
+      <button class="btn" id="modalAdd" type="button">أضف للسلة 🛒</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="to-top" id="toTop" type="button" title="للأعلى">&#8593;</button>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>see the world from my view | البوكيهات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="" data-backend="html" data-about="about.html" data-index="index.html">
+  <div id="top"></div>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">🌸 see the world from my view</a>
+    <nav class="nav-links">
+      <a href="index.html">تسجيل الدخول</a>
+      <a href="about.html">عن المتجر</a>
+      <a href="pots.html">الأصص</a>
+      <a href="bouquets.html" class="active">البوكيهات</a>
+    </nav>
+    <div class="nav-tools">
+      <span id="userBox" class="user-box">
+      
+      </span>
+      <button class="icon-btn" id="themeBtn" type="button" title="الوضع الليلي">🌙</button>
+      <button class="icon-btn" id="cartBtn" type="button" title="سلة المشتريات">🛒<span class="badge cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero reveal">
+      <h2>💐 البوكيهات</h2>
+      <p>بوكيهات منسقة بأسلوب عصري لكل مناسبة.</p>
+    </section>
+
+    <div class="strip reveal"><div class="strip-track" id="stripTrack" data-category="bouquets"></div></div>
+
+    <section class="card toolbar reveal">
+      <input type="search" id="search" placeholder="🔍 ابحثي عن منتج...">
+      <select id="sizeFilter">
+        <option value="">كل الأحجام</option>
+        <option>صغير</option>
+        <option>وسط</option>
+        <option>كبير</option>
+      </select>
+      <select id="sortSel">
+        <option value="">الترتيب الافتراضي</option>
+        <option value="price-asc">السعر: الأقل أولاً</option>
+        <option value="price-desc">السعر: الأعلى أولاً</option>
+        <option value="name">حسب الاسم</option>
+      </select>
+    </section>
+
+    <section class="grid" id="productGrid" data-category="bouquets"></section>
+    <p class="empty" id="noResults" hidden>لا توجد منتجات مطابقة 🌸</p>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; see the world from my view</p>
+    <p><a href="#top">&#8593; العودة للأعلى</a></p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head">
+      <h3>🛒 سلة المشتريات</h3>
+      <button class="icon-btn" id="closeCart" type="button">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>المجموع</span><strong id="cartTotal">0 جنيه</strong></div>
+      <button class="btn" id="checkoutBtn" type="button">إتمام الطلب</button>
+      <button class="btn btn-outline" id="clearCart" type="button">تفريغ السلة</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="icon-btn modal-close" id="modalClose" type="button">✕</button>
+      <img id="modalImg" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalMeta"></p>
+      <p class="price" id="modalPrice"></p>
+      <button class="btn" id="modalAdd" type="button">أضف للسلة 🛒</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="to-top" id="toTop" type="button" title="للأعلى">&#8593;</button>
+  <script src="script.js"></script>
+</body>
+</html>
