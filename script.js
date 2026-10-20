@@ -61,13 +61,27 @@
   /* الصور: يجرّب الامتدادات المختلفة تلقائياً (jpg, png, webp ...) */
   const EXTS = ['jpg', 'jpeg', 'png', 'webp', 'jfif', 'JPG', 'PNG'];
   function smartImg(img, base) {
-    if (/\.[a-zA-Z]+$/.test(base)) { img.src =  base; return; }
+    if (/\.[a-zA-Z]+$/.test(base)) {
+        img.src = base;
+        return;
+    }
+
     let i = 0;
-    img.addEventListener('error', function () {
-      i++;
-      if (i < EXTS.length) {
-        img.src = 'images/' + base + '.' + EXTS[i];
-      } else {
+    const EXTS = ['jpg', 'jpeg', 'png', 'webp', 'jfif', 'JPG', 'PNG'];
+
+    img.onerror = function () {
+        i++;
+
+        if (i < EXTS.length) {
+            img.src = base + '.' + EXTS[i];
+        } else {
+            img.classList.add('noimg');
+            img.removeAttribute('src');
+        }
+    };
+
+    img.src = base + '.' + EXTS[i];
+  } else {
         img.classList.add('noimg');
         img.removeAttribute('src');
       }
