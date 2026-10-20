@@ -1,6 +1,4 @@
-/* ==========================================================
-   see the world from my view — تنسيقات المتجر
-   ========================================================== */
+
 :root {
   --pink: #ff9ec7;
   --pink2: #f8bbd0;
@@ -13,7 +11,6 @@
   --radius: 16px;
 }
 
-/* الوضع الليلي */
 body.dark {
   --light: #2a1620;
   --card: #3a1f2c;
@@ -117,7 +114,7 @@ img { max-width: 100%; }
   font-weight: bold;
 }
 
-/* ===== الحاويات ===== */
+
 .container { max-width: 1050px; margin: 25px auto; padding: 0 15px; }
 .container.narrow { max-width: 520px; }
 
