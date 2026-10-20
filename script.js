@@ -61,7 +61,7 @@
   /* الصور: يجرّب الامتدادات المختلفة تلقائياً (jpg, png, webp ...) */
   const EXTS = ['jpg', 'jpeg', 'png', 'webp', 'jfif', 'JPG', 'PNG'];
   function smartImg(img, base) {
-    if (/\.[a-zA-Z]+$/.test(base)) { img.src = 'images/' + base; return; }
+    if (/\.[a-zA-Z]+$/.test(base)) { img.src =  base; return; }
     let i = 0;
     img.addEventListener('error', function () {
       i++;
